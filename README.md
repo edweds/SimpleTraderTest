@@ -1,0 +1,2 @@
+# SimpleTraderMVVM
+Learning project
