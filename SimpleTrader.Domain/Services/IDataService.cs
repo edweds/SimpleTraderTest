@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SimpleTrader.Domain.Services
 {
-    interface IDataService<T>
+    public interface IDataService<TValue>
     {
-        Task<IEnumerable<T>> GetAll();
-        Task Get(int id);
-        Task Create(T entity);
-        Task Update(int id, T entity);
+        Task<IEnumerable<TValue>> GetAll();
+        Task<TValue> Get(int id);
+        Task <TValue>Create(TValue entity);
+        Task<TValue> Update(int id, TValue entity);
         Task<bool> Delete(int id);
     }
 }
